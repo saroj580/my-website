@@ -1,0 +1,233 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    color: antiquewhite;
+    background: black;
+}
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: rgb(91, 93, 94);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo{
+    position: relative;
+    font-size: 25px;
+    color: antiquewhite;
+    text-decoration: none;
+    font-weight: 600;
+    left: 0;
+    cursor: default;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+}
+
+@keyframes slideRight {
+    0%{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }   
+}
+
+.navbar a{
+    display: inline-block;
+    font-size: 25px;
+    color: antiquewhite;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 100px;
+    transition: .9s;
+    opacity: 0;
+    animation: slideTop .5s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+}
+
+@keyframes slideTop {
+    0%{
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }   
+}
+
+.navbar a:hover{
+    color: rgb(91, 87, 87);
+}
+
+.home{
+    position: relative;
+    width: 100%;
+    justify-content: space-between;
+    height: 100vh;
+    background: url(background.jpg) no-repeat;
+    background-size: cover;
+    display: flex;
+    background-position: center;
+    padding: 160px 10% 0;
+    
+}
+
+.home-content{
+    max-width: 500px;
+}
+
+.home-content h3{
+    font-size: 30spx;
+    font-weight: 600;
+    opacity: 0;
+    animation: slideBottom 1s ease forwards;
+    animation-delay: .7s;
+}
+@keyframes slideBottom {
+    0%{
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }   
+}
+
+.home-content h3 span{
+    color: aqua;
+}
+
+.home-content h3:nth-of-type(2){
+    margin-bottom: 10px;
+    animation: slideTop 1s ease forwards;
+    animation-delay: .7s;
+
+}
+
+.home-content h1{
+    font-size: 46px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin: -3px 0;
+    animation: slideRight 1s ease forwards;
+    animation-delay: 1s;
+}
+
+.home-content p{
+    font-size: 20px;
+    color: rgb(231, 229, 227);
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: 1s;
+}
+@keyframes slideLeft {
+    0%{
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }   
+}
+
+.home-sci a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid  #fff;
+    border-radius: 50%;
+    font-size: 20px;
+    text-decoration: none;
+    opacity: 0;
+    transition: .5s ease;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+    color: aliceblue;
+    margin: 20px 15px 30px 0;
+}
+
+.home-sci a:hover{
+    background: rgb(195, 200, 201);
+    transition: all .3s ease-in-out;
+    color: rgb(13, 190, 230);
+    box-shadow: 0 0 20px rgb(13, 190, 230);
+}
+
+.btn-box{
+    display: inline-block;
+    padding: 12px 28px;
+    font-size: 16px;
+    border-radius: 40px;
+    color: rgb(238, 232, 232);
+    letter-spacing: 2px;
+    text-decoration: none;
+    font-weight: 600;
+    background: rgb(11, 179, 198);
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: 2s;
+    box-shadow: 0 0 5px cyan, 0 0 25px cyan;
+}
+
+.btn-box:hover{
+    box-shadow: 0 0 5px cyan, 0 0 25px cyan, 0 0 50px cyan, 0 0 100px cyan, 0 0 200px cyan;
+    transition: all .4s ease-in-out;
+}
+
+.about{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 0.5rem;
+  
+}
+
+.about-img img{
+    position: relative;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;   
+}
+
+.about-text {
+    max-width: 580px;
+}
+.about-text h2{
+    font-size: 60px;
+}
+.about-text h2 span{
+    color: cyan;
+}
+.about-text h4{
+    font-size: 29px;
+    font-weight: 600;
+    color: #fff;
+    line-height: 1.7;
+    margin: 15px 0 30px;
+}
+.about-text p{
+    color: #fff;
+    font-size: 20px;
+    line-height: 1.4;
+    margin-bottom: 4rem;
+}
+
+
