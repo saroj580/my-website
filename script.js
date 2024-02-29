@@ -5,6 +5,7 @@ let typed = new Typed(".text", {
     backDelay:1000,
     // startDelay:500,
     loop:true,
+      
 
 });
-
+console.log("hey")
