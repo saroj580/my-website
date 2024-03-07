@@ -1,4 +1,4 @@
-let typed = new Typed(".text", {
+let typed = new Typed(".text1", {
     strings:["Frontend Developer", "Youtuber", "Web Developer"],
     typeSpeed:100,
     backSpeed:100,
